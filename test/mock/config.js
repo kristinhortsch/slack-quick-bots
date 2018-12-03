@@ -660,8 +660,8 @@ exports = module.exports = {
           algo: 'CUMULATIVE_DIFFERENCE',
           data: function (input, options, callback) {
             callback(null, [
-              {time: 1511149547, value: 80},
-              {time: 1511149581, value: 1},
+              { time: 1511149547, value: 80 },
+              { time: 1511149581, value: 1 },
             ]);
           },
         },
