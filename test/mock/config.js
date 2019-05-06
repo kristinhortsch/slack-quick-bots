@@ -606,6 +606,42 @@ exports = module.exports = {
       botToken: 'xoxb-16681282704-dYYl7qESWogOUbzdJdqwK5gS',
     }],
   },
+  isAllowedChannel: {
+    bots: [{
+      botCommand: {
+        PING: {
+          commandType: 'DATA',
+          validation: [{
+            schema: [[1, 2]],
+            default: 1,
+            help: [{
+              recommend: '1',
+              error: '{{arg}} is incorrect',
+            }],
+          }],
+          template: sampleTemplate,
+          data: function (input, options, callback) {
+            callback(null, {
+              'param': input.params,
+            });
+          },
+        },
+      },
+      allowedChannels: ['C0GG92T45'],
+      mock: {
+        self: {
+          name: 'testbot2',
+          id: 'U1234567',
+        },
+        members: [{
+          id: 'U0GG92T45', name: 'user1',
+        }, {
+          id: 'U0GG92T46', name: 'user2',
+        }],
+      },
+      botToken: 'xoxb-16681282704-dYYl7qESWogOUbzdJdqwK5gS',
+    }],
+  },
   blockDirectMessage: {
     bots: [{
       botCommand: {
